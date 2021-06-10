@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
@@ -15,7 +16,9 @@ int main()
 		player=(player%2)?1:2;
 		cout << "Player " << player << ", enter a number:  ";
 		cin >> choice;
-		mark=(player == 1) ? 'X' : 'O';
+		mark=(player == 1) ? 'X' : 'O';	
+		if(choice==1 || choice==2 || choice==3 || choice==4 || choice==5 || choice==6 || choice==7 || choice==8 || choice==9 || choice==10 )
+		{
 		if (choice == 1 && square[1] == '1')
 			square[1] = mark;
 		else if (choice == 2 && square[2] == '2')
@@ -40,6 +43,11 @@ int main()
 			player--;
 			cin.ignore();
 			cin.get();
+		}
+		}
+		else{
+			cout<<".";
+			break;
 		}
 		i=checkwin();
 		player++;
