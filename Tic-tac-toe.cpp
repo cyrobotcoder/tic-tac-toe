@@ -46,7 +46,7 @@ int main()
 		}
 		}
 		else{
-			cout<<"You didn't enter a valid number";
+			cout<<".";
 			break;
 		}
 		i=checkwin();
